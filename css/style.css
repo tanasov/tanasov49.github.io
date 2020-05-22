@@ -925,6 +925,12 @@ button:focus {
   margin: 0 auto;
 }
 
+@media (max-width: 850px) {
+  .header {
+    height: 538px;
+  }
+}
+
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -936,6 +942,7 @@ button:focus {
           align-items: center;
   padding: 60px 0 0 0;
   position: relative;
+  align-items: center;
 }
 
 @media (max-width: 1135px) {
@@ -946,9 +953,8 @@ button:focus {
 
 @media (max-width: 1135px) {
   .nav {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
 
@@ -1029,31 +1035,35 @@ button:focus {
   margin: 0 0 0 30px;
 }
 
+.btn_menu {
+  visibility: hidden;
+}
+
 @media (max-width: 1135px) {
   .menu-toggle {
     display: block;
     position: relative;
     top: 50px;
-    left: 50px;
     z-index: 1;
     -webkit-user-select: none;
     -moz-user-select: none;
      -ms-user-select: none;
          user-select: none;
   }
-  .menu-toggle .btn_menu {
+  .btn_menu {
+    visibility: visible;
+  }
+  .btn_menu {
     display: block;
     width: 50px;
     height: 50px;
     position: absolute;
-    top: -7px;
-    left: -5px;
     cursor: pointer;
     z-index: 2;
     opacity: 0;
     -webkit-touch-callout: none;
   }
-  .menu-toggle .line_btn {
+  .line_btn {
     display: block;
     width: 32px;
     height: 4px;
@@ -1078,7 +1088,7 @@ button:focus {
   .menu-toggle .line_btn:nth-last-child(2) {
     -webkit-transform-origin: 0% 100%;
             transform-origin: 0% 100%;
-    width: 22px;
+    width: 32px;
     -webkit-transition: width, 0.5s;
     transition: width, 0.5s;
   }
@@ -1103,8 +1113,11 @@ button:focus {
     width: 36px;
   }
   .nav-menu {
-    margin: -100px 0 0 -60px;
     padding-top: 125px;
+    position: relative;
+    top: -100px;
+    left: -100px;
+    z-index: 2;
     -webkit-transform: translate(0, -100%);
             transform: translate(0, -100%);
     -webkit-transform-origin: 0% 0%;
