@@ -1019,6 +1019,7 @@ button:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
 }
 
 @media (max-width: 1135px) {
@@ -1048,13 +1049,16 @@ button:focus {
     -webkit-box-shadow: 1px 0 6px rgba(0, 0, 0, 0.2);
             box-shadow: 1px 0 6px rgba(0, 0, 0, 0.2);
     opacity: .4;
-    top: 97px;
-    right: 5%;
+    top: 0;
+    right: -200%;
+    height: 5vh;
   }
 }
 
 .nav-menu-list {
   margin: 0 0 0 30px;
+  display: block;
+  max-width: 100%;
 }
 
 .btn_menu {
@@ -1081,7 +1085,7 @@ button:focus {
     height: 50px;
     position: absolute;
     cursor: pointer;
-    z-index: 2;
+    z-index: 9;
     opacity: 0;
     -webkit-touch-callout: none;
   }
@@ -1142,12 +1146,8 @@ button:focus {
     height: 55vh;
     border-radius: 0;
     opacity: .9;
-  }
-}
-
-@media (max-width: 1135px) and (max-width: 850px) {
-  .btn_menu:checked ~ .nav-menu {
-    padding: 4em 30% 0 30%;
+    padding: 3em 0% 3em 0%;
+    right: 0;
   }
 }
 
