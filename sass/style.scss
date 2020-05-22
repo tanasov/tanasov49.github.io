@@ -105,8 +105,8 @@ button:focus {
         background-color: #333;
         box-shadow: 1px 0 6px rgba(0, 0, 0, .2);
         opacity: .4;
-        top: 107px;
-        right: 10%;
+        top: 97px;
+        right: 5%;
     }
 }
 
@@ -185,7 +185,7 @@ button:focus {
         border-radius: 0;
         opacity: .9;
         @media (max-width: 850px) {
-            padding: 0em 7em 3em 7em;
+            padding: 4em 30% 0 30%;
         }
     }
 }
