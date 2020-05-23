@@ -898,6 +898,14 @@ textarea {
   font-style: normal;
 }
 
+*,
+::before,
+::after,
+:active {
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
 body {
   max-width: 1920px;
   margin: 0 auto;
@@ -1040,6 +1048,10 @@ button:focus {
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
+  .nav-menu:after {
+    -webkit-transform: translate(0, 100%);
+            transform: translate(0, 100%);
+  }
 }
 
 @media (max-width: 850px) {
@@ -1071,6 +1083,8 @@ button:focus {
     position: relative;
     top: 50px;
     z-index: 1;
+    width: 40px;
+    height: 40px;
     -webkit-user-select: none;
     -moz-user-select: none;
      -ms-user-select: none;
@@ -1078,11 +1092,9 @@ button:focus {
   }
   .btn_menu {
     visibility: visible;
-  }
-  .btn_menu {
     display: block;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     position: absolute;
     cursor: pointer;
     z-index: 9;
@@ -1097,7 +1109,7 @@ button:focus {
     border-radius: 4px;
     position: relative;
     background: #fff;
-    margin-bottom: 7px;
+    margin-bottom: 10px;
     -webkit-transform-origin: 4px 0px;
             transform-origin: 4px 0px;
     -webkit-transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
@@ -1122,10 +1134,11 @@ button:focus {
     opacity: 1;
     -webkit-transform: rotate(45deg) translate(0px, 0px);
             transform: rotate(45deg) translate(0px, 0px);
-    background: #232323;
-    width: 36px;
+    background: #fff;
+    width: 46px;
     -webkit-transition: width, 0.5s;
     transition: width, 0.5s;
+    z-index: 9;
   }
   .btn_menu:checked ~ .line_btn:nth-last-child(3) {
     opacity: 0;
@@ -1136,7 +1149,7 @@ button:focus {
     opacity: 1;
     -webkit-transform: rotate(-45deg) translate(0, 0px);
             transform: rotate(-45deg) translate(0, 0px);
-    width: 36px;
+    width: 46px;
   }
   .btn_menu:checked ~ .nav-menu {
     -webkit-transform: scale(1, 1);
