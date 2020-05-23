@@ -1930,6 +1930,7 @@ button:focus {
 .article_photo {
   display: block;
   width: 100%;
+  height: auto;
   -webkit-transition: 0.7s linear;
   transition: 0.7s linear;
 }
@@ -2166,6 +2167,12 @@ button:focus {
   margin-top: 120px;
 }
 
+@media (max-width: 850px) {
+  .txt_section_4 {
+    margin: 0;
+  }
+}
+
 .image_section_4 {
   margin-top: 79px;
 }
@@ -2390,6 +2397,11 @@ button:focus {
   color: #fff;
 }
 
+.image_article_section_6 {
+  width: 100%;
+  height: auto;
+}
+
 .pagination_image_article_6 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2553,15 +2565,15 @@ button:focus {
   }
 }
 
+.logo_section_7 {
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+  padding: 20px;
+}
+
 .logo_section_7:hover {
   -webkit-filter: brightness(60%);
           filter: brightness(60%);
-}
-
-@media (max-width: 1135px) {
-  .logo_section_7 {
-    margin: 20px;
-  }
 }
 
 .image_section_7 {

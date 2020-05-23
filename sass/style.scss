@@ -712,6 +712,7 @@
     .article_photo {
         display: block;
         width: 100%;
+        height: auto;
         transition: 0.7s linear;
     }
     
@@ -891,6 +892,9 @@
     .txt_section_4 {
         max-width: 700px;
         margin-top: 120px;
+        @media (max-width: 850px) {
+            margin: 0;
+        }
     }
     
     .image_section_4 {
@@ -1050,6 +1054,11 @@
         }
     }
     
+    .image_article_section_6 {
+        width: 100%;
+        height: auto;
+    }
+    
     .pagination_image_article_6 {
         display: flex;
         justify-content: center;
@@ -1169,12 +1178,13 @@
     }
     
     .logo_section_7 {
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+        padding: 20px;
         &:hover {
             filter: brightness(60%);
         }
-        @media (max-width: 1135px) {
-            margin: 20px;
-        }
+        @media (max-width: 1135px) {}
     }
     
     .image_section_7 {
