@@ -182,6 +182,7 @@
             width: 46px;
             transition: width, 0.5s;
             z-index: 9;
+            position: fixed;
         }
         .btn_menu:checked~.line_btn:nth-last-child(3) {
             opacity: 0;
@@ -191,6 +192,9 @@
             opacity: 1;
             transform: rotate(-45deg) translate(0, 0px);
             width: 46px;
+            z-index: 9;
+            position: fixed;
+            top: 78px;
         }
         .btn_menu:checked~.nav-menu {
             transform: scale(1.0, 1.0);
@@ -201,6 +205,12 @@
             opacity: .9;
             padding: 3em 0% 3em 0%;
             right: 0;
+        }
+        .btn_menu:checked {
+            position: fixed;
+            & .line_btn:nth-last-child(2) {
+                position: fixed;
+            }
         }
     }
     
