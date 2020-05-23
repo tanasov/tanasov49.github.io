@@ -901,7 +901,8 @@ textarea {
 *,
 ::before,
 ::after,
-:active {
+:active,
+:checked {
   -webkit-transition: .3s;
   transition: .3s;
 }
@@ -935,7 +936,7 @@ button:focus {
 
 @media (max-width: 850px) {
   .header {
-    height: 538px;
+    height: 140px;
   }
 }
 
@@ -1178,10 +1179,6 @@ button:focus {
     padding: 3em 0% 3em 0%;
     right: 0;
   }
-  .btn_menu:checked ~ .nav-menu::after {
-    -webkit-transform: translate(0, 100%);
-            transform: translate(0, 100%);
-  }
 }
 
 @media (max-width: 1135px) and (max-width: 850px) {
@@ -1265,8 +1262,20 @@ button:focus {
 
 .search_nav:focus {
   opacity: 1;
-  left: -84px;
+  left: -150px;
   top: 35px;
+}
+
+@media (max-width: 1135px) {
+  .search_nav:focus {
+    left: -74px;
+  }
+}
+
+@media (max-width: 850px) {
+  .search_nav:focus {
+    left: -84px;
+  }
 }
 
 .title {
@@ -2197,7 +2206,6 @@ button:focus {
 }
 
 .list_section_4 {
-  margin-top: 115px;
   margin-left: 29px;
 }
 
@@ -2525,7 +2533,7 @@ button:focus {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 489px;
+  height: 489px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2540,11 +2548,8 @@ button:focus {
 
 @media (max-width: 1135px) {
   .section_7 {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     text-align: center;
+    height: auto;
   }
 }
 
@@ -2557,6 +2562,11 @@ button:focus {
   .logo_section_7 {
     margin: 20px;
   }
+}
+
+.image_section_7 {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Footer */
@@ -2746,6 +2756,12 @@ button:focus {
 
 .text_1_footer:last-child {
   border: none;
+}
+
+@media (max-width: 850px) {
+  .text_1_footer {
+    font-size: 11px;
+  }
 }
 
 .txt_2_footer_2 {

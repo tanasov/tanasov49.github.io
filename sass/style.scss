@@ -4,7 +4,8 @@
     *,
      ::before,
      ::after,
-     :active {
+     :active,
+     :checked {
         transition: .3s;
     }
     
@@ -43,7 +44,7 @@
         background-size: cover;
         margin: 0 auto;
         @media (max-width: 850px) {
-            height: 538px;
+            height: 140px;
         }
     }
     
@@ -206,9 +207,6 @@
             opacity: .9;
             padding: 3em 0% 3em 0%;
             right: 0;
-            &::after {
-                transform: translate(0, 100%);
-            }
         }
         .btn_menu:checked {
             @media (max-width: 850px) {
@@ -268,8 +266,14 @@
         background-color: transparent;
         &:focus {
             opacity: 1;
-            left: -84px;
+            left: -150px;
             top: 35px;
+            @media (max-width: 1135px) {
+                left: -74px;
+            }
+            @media (max-width: 850px) {
+                left: -84px;
+            }
         }
     }
     
@@ -915,7 +919,6 @@
     }
     
     .list_section_4 {
-        margin-top: 115px;
         margin-left: 29px;
         @media (max-width: 850px) {
             margin: 0;
@@ -1154,14 +1157,14 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        min-height: 489px;
+        height: 489px;
         display: flex;
         justify-content: space-around;
         align-items: center;
         flex-wrap: nowrap;
         @media (max-width: 1135px) {
-            flex-direction: column;
             text-align: center;
+            height: auto;
         }
     }
     
@@ -1172,6 +1175,11 @@
         @media (max-width: 1135px) {
             margin: 20px;
         }
+    }
+    
+    .image_section_7 {
+        max-width: 100%;
+        height: auto;
     }
     /* Footer */
     
@@ -1292,6 +1300,9 @@
         }
         &:last-child {
             border: none;
+        }
+        @media (max-width: 850px) {
+            font-size: 11px;
         }
     }
     
