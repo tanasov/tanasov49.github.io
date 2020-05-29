@@ -915,11 +915,19 @@
     .heading_section_4 {
         @include head_txt(30px, "Raleway", 1.2, 700, rgb(85, 85, 85));
         margin: 0 0 40px 0;
+        @media (max-width: 850px) {
+            font-size: 25px;
+            text-align: center;
+        }
     }
     
     .text_section_4 {
         @include head_txt(16px, $font-family, 1.75, 400, rgb(140, 140, 140));
         margin: 0 0 45px 0;
+        @media (max-width: 850px) {
+            font-size: 12px;
+            text-align: center;
+        }
     }
     
     .list_section_4 {
@@ -932,6 +940,9 @@
     .list_item_section_4 {
         @include head_txt(16px, $font-family, 2, 400, rgb(140, 140, 140));
         text-align: left;
+        @media (max-width: 850px) {
+            font-size: 12px;
+        }
     }
     
     .list_section_4>.list_item_section_4 {
@@ -976,6 +987,9 @@
             background-color: #fff;
             margin: 0 auto;
             align-self: flex-end;
+        }
+        @media (max-width: 850px) {
+            margin: 20px 42px;
         }
     }
     
